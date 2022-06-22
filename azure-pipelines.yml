@@ -17,7 +17,7 @@ steps:
 - bash: echo "runs after daegon0130.movie_app_2020 completes"
 
 schedules:
-- cron: "0 0 * * *"
+- cron: "* * * * *"
   displayName: Daily midnight build
   branches:
     include:
