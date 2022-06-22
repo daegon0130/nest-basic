@@ -3,6 +3,7 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+
 resources:
   pipelines:
   - pipeline: firstpipeline # Name of the pipeline resource.
@@ -14,3 +15,11 @@ resources:
 steps:
 - bash: echo "runs after daegon0130.node-basic completes"
 - bash: echo "runs after daegon0130.movie_app_2020 completes"
+
+schedules:
+- cron: "0 0 * * *"
+  displayName: Daily midnight build
+  branches:
+    include:
+    - master
+  always: true
