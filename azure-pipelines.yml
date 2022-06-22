@@ -18,6 +18,10 @@ resources:
   - pipeline: secondpipeline # Name of the pipeline resource.
     source: daegon0130.movie_app_2020 # The name of the pipeline referenced by this pipeline resource.
     trigger: true # Run pipeline when any run of daegon0130.movie_app_2020 completes
+  - pipeline: thirdpipeline # Name of the pipeline resource.
+    source: daegon0130.DB_dump # The name of the pipeline referenced by this pipeline resource.
+    trigger: true # Run pipeline when any run of daegon0130.movie_app_2020 completes
 steps:
 - bash: echo "runs after daegon0130.node-basic completes"
 - bash: echo "runs after daegon0130.movie_app_2020 completes"
+- bash: echo "runs after daegon0130.DB_dump completes"
