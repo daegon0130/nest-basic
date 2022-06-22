@@ -15,11 +15,3 @@ resources:
 steps:
 - bash: echo "runs after daegon0130.node-basic completes"
 - bash: echo "runs after daegon0130.movie_app_2020 completes"
-
-schedules:
-- cron: "* * * * *"
-  displayName: Daily midnight build
-  branches:
-    include:
-    - master
-  always: true
